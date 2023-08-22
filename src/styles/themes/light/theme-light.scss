@@ -1,0 +1,25 @@
+@import "../../variables";
+
+// Default theme
+// $theme-map-light: (
+:root .light {
+  --mdtv-theme-btn-primary: #{linear-gradient(
+      90deg,
+      $light-blue-500 0%,
+      $light-blue-900 100%
+    )};
+  --mdtv-theme-btn-bg-primary: #{linear-gradient(
+      90deg,
+      $light-blue-800 0%,
+      $indigo-900 100%
+    )};
+  --mdtv-theme-btn-disabled: #{$gray-200};
+
+  // --mdtv-theme-secondary: #{$lg};
+  // --mdtv-theme-primary: #{#d75894};
+  // --mdtv-theme-background: #{#fafafa};
+  // --mdtv-theme-on-primary: #{#fff};
+  // --mdtv-theme-on-secondary: #{#fff};
+  // --mdtv-theme-on-surface: #{#000};
+}
+// );

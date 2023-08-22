@@ -1,33 +1,45 @@
-import { Button as PrimeButton } from "primereact/button";
-//theme
+import React from "react";
+
 import "primereact/resources/themes/lara-light-indigo/theme.css";
-
-//core
 import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 
-import "./MyButton.css";
+import { Button as PrimeButton } from "primereact/button";
+import "./MyButton.scss";
 import { MyComponentProps } from "../Component.interface";
 
 export interface MyButtonProps extends MyComponentProps {
   /** The label to assign on button. */
-  label: string;
+  label?: string;
+  /** Boolean property to disable a button when click is triggered */
+  isLoading: boolean;
+  /** Boolean property to disable a button */
+  isDisabled: boolean;
+  /** What background color to usex */
+  background?: string;
   /** The action to execute when the click is triggered. */
   onClick: () => void;
 }
 
 /**
- * MyDTV Base Button
+ * MIDTV Base Button disabled
  */
 export const MyButton: React.FC<MyButtonProps> = ({
-  testId = "mydtv-button",
-  ...props
+  label,
+  onClick,
+  isLoading,
+  isDisabled,
+  background,
 }): JSX.Element => {
   return (
-    <PrimeButton
-      test-id={testId}
-      label={props.label}
-      onClick={props.onClick}
-      className={"mdtv-button " + props.additionalClassName}
-    />
+    <>
+      <PrimeButton
+        disabled={isDisabled}
+        loading={isLoading}
+        label={label}
+        onClick={onClick}
+        className={`mdtv-button ${background}`}
+      />
+    </>
   );
 };

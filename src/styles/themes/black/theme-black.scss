@@ -1,0 +1,25 @@
+// @import "../../styles/variables";
+
+// Override the default light theme
+// $theme-map-dark: (
+:root .dark {
+  --mdtv-theme-btn-primary: #{linear-gradient(
+      90deg,
+      $light-blue-500 0%,
+      $light-blue-900 100%
+    )};
+  --mdtv-theme-btn-bg-primary: #{linear-gradient(
+      90deg,
+      $light-blue-800 0%,
+      $indigo-900 100%
+    )};
+
+  // --mdtv-theme-primary: #{black};
+  // --mdtv-theme-secondary: #{#c298dc};
+  // --mdtv-theme-surface: #{#2f2b2b};
+  // --mdtv-theme-background: #{#1b1918};
+  // --mdtv-theme-on-primary: #{red};
+  // --mdtv-theme-on-secondary: #{#000};
+  // --mdtv-theme-on-surface: #{#f5f1f2};
+}
+// );

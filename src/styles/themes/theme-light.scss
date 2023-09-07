@@ -1,8 +1,7 @@
-@import "../../variables";
-
+@import "../themes/";
 // Default theme
 // $theme-map-light: (
-:root .light {
+:root {
   --mdtv-theme-btn-primary: #{linear-gradient(
       90deg,
       $light-blue-500 0%,

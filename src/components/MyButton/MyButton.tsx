@@ -8,6 +8,8 @@ import { Button as PrimeButton } from "primereact/button";
 import "./MyButton.scss";
 import { MyComponentProps } from "../Component.interface";
 
+import "../../styles/mdtv.scss";
+
 export interface MyButtonProps extends MyComponentProps {
   /** The label to assign on button. */
   label?: string;
@@ -22,7 +24,7 @@ export interface MyButtonProps extends MyComponentProps {
 }
 
 /**
- * MIDTV Base Button disabled
+ * MIDTV Base Button
  */
 export const MyButton: React.FC<MyButtonProps> = ({
   label,
@@ -38,7 +40,7 @@ export const MyButton: React.FC<MyButtonProps> = ({
         loading={isLoading}
         label={label}
         onClick={onClick}
-        className={`mdtv-button ${background}`}
+        className={`mdtv-button`}
       />
     </>
   );

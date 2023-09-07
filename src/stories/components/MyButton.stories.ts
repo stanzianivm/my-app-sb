@@ -19,9 +19,9 @@ export const Primary: Story = {
     label: "Ingresar a MIDirecTV",
     isLoading: false,
     isDisabled: false,
-    background: "light",
+    // background: "dark",
     onClick() {
-      console.log(123);
+      alert("Entering the system...");
     },
   },
 };
@@ -31,7 +31,7 @@ export const Disabled: Story = {
     label: "Ingresar a MIDirecTV",
     isLoading: false,
     isDisabled: true,
-    background: "light",
+    // background: "light",
     onClick() {
       console.log(123);
     },
@@ -43,7 +43,7 @@ export const Loading: Story = {
     // label: "",
     isLoading: true,
     isDisabled: false,
-    background: "light",
+    // background: "light",
     onClick() {
       console.log(123);
     },

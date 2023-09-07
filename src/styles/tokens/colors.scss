@@ -1,0 +1,13 @@
+:root {
+  --mdtv-button-primary-blue: linear-gradient(
+    90deg,
+    var(--mdtv-light-blue-500) 0%,
+    var(--mdtv-light-blue-900) 100%
+  );
+  --mdtv-button-primary-blue-hover: linear-gradient(
+    90deg,
+    var(--mdtv-light-blue-800) 0%,
+    var(--mdtv-indigo-900) 100%
+  );
+  --mdtv-button-primary-disabled: var(--mdtv-gray-200);
+}

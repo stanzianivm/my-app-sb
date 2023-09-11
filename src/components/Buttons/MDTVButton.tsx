@@ -5,33 +5,36 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
 import { Button as PrimeButton } from "primereact/button";
-import "./MyButton.scss";
-import { MyComponentProps } from "../Component.interface";
+import "./MDTVButton.scss";
+// import { MyComponentProps } from "../Component.interface";
 
 import "../../styles/mdtv.scss";
 
-export interface MyButtonProps extends MyComponentProps {
+export interface MyButtonProps {
   /** The label to assign on button. */
   label?: string;
   /** Boolean property to disable a button when click is triggered */
   isLoading: boolean;
   /** Boolean property to disable a button */
   isDisabled: boolean;
-  /** What background color to usex */
-  background?: string;
+  /** Boolean property for the button to be of type link*/
+  isLink?: boolean;
+  /** What class to different buttons */
+  className?: string;
   /** The action to execute when the click is triggered. */
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 /**
  * MIDTV Base Button
  */
-export const MyButton: React.FC<MyButtonProps> = ({
+export const MDTVButton: React.FC<MyButtonProps> = ({
   label,
   onClick,
   isLoading,
   isDisabled,
-  background,
+  isLink,
+  className,
 }): JSX.Element => {
   return (
     <>
@@ -40,7 +43,8 @@ export const MyButton: React.FC<MyButtonProps> = ({
         loading={isLoading}
         label={label}
         onClick={onClick}
-        className={`mdtv-button`}
+        className={`mdtv-button-${className}`}
+        link={isLink}
       />
     </>
   );

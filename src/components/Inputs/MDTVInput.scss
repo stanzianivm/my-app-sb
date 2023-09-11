@@ -1,0 +1,51 @@
+.input-container {
+  margin-bottom: 30px !important;
+}
+
+.input-controls {
+  line-height: 40px;
+  width: 368px;
+  height: 48px;
+  border-radius: 30px !important;
+  padding: 11px 10px;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:enabled:focus {
+    border-color: #ced4da !important;
+  }
+
+  &:enabled:hover {
+    border-color: #ced4da !important;
+  }
+}
+
+.input-controls-error {
+  &:enabled:hover {
+    border-color: #e24c4c !important;
+  }
+}
+
+.label-text {
+  font-family: var(--mdtv-font-famili-ibm-plex-sans) !important;
+}
+
+.small-error {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.p-span {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  flex-direction: column !important;
+}
+
+@media only screen and (max-width: 395px) {
+  .input-controls {
+    width: 265px;
+  }
+}

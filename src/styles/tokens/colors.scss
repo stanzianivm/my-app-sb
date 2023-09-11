@@ -1,4 +1,8 @@
 :root {
+  /*=============================================
+  =            Section colors buttons          =
+  =============================================*/
+
   --mdtv-button-primary-blue: linear-gradient(
     90deg,
     var(--mdtv-light-blue-500) 0%,
@@ -9,5 +13,12 @@
     var(--mdtv-light-blue-800) 0%,
     var(--mdtv-indigo-900) 100%
   );
+
+  --mdtv-button-secondary-outline: var(--mdtv-white);
+  --mdtv-button-secondary-outline-hover: var(--mdtv-white);
+  --mdtv-button-secondary-outline-color: var(--mdtv-light-blue-800);
+
   --mdtv-button-primary-disabled: var(--mdtv-gray-200);
+
+  /*=====  End of Section colors buttons  ======*/
 }

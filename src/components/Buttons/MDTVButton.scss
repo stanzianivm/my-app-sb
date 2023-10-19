@@ -1,13 +1,19 @@
 %mdtv-button {
-  cursor: pointer;
-  height: 48px;
   border-radius: 24px;
-  gap: 10px;
-  font-family: var(--mdtv-font-family-poppins-normal) !important;
+  cursor: pointer;
   display: flex;
-  text-align: center;
-  z-index: 1;
-  width: 368px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mdtv-font-family-poppins-normal) !important;
+  width: 300px !important;
+
+  // &:disabled {
+  //   cursor: not-allowed !important;
+  //   pointer-events: all !important;
+  //   background: var(--mdtv-button-primary-disabled) !important;
+  //   border: none;
+  //   opacity: 1;
+  // }
 
   &:focus {
     box-shadow: none;
@@ -18,23 +24,26 @@
   }
 }
 
-.mdtv-button-primary-blue {
+.mdtv-button-primary {
   @extend %mdtv-button;
-
   background: var(--mdtv-button-primary-blue) !important;
   border: none;
+  position: relative;
+  transition: background-color 0.75s, color 0.75s, border-color 0.75s,
+    box-shadow 0.75s;
+  z-index: 1;
 
   &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: var(--mdtv-button-primary-blue-hover) !important;
-    z-index: -1;
-    transition: opacity 0.25s linear;
+    bottom: 0;
+    content: "";
+    left: 0;
     opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.25s linear;
+    z-index: -1;
   }
 
   &:hover::before {
@@ -42,9 +51,8 @@
   }
 }
 
-.mdtv-button-secondary-outline {
+.mdtv-button-secondary {
   @extend %mdtv-button;
-
   background: var(--mdtv-button-secondary-outline) !important;
   border-style: solid !important;
   border-color: var(--mdtv-button-secondary-outline-color) !important;
@@ -59,41 +67,65 @@
 
 .mdtv-button-disabled {
   @extend %mdtv-button;
-
   &:disabled {
     cursor: not-allowed !important;
     pointer-events: all !important;
     background: var(--mdtv-button-primary-disabled) !important;
     border: none;
     opacity: 1;
+    // width: 368px;
+  }
+
+  span {
+    flex: 0 !important;
   }
 }
 
 .mdtv-button-link {
-  color: #0073ae !important;
-  box-shadow: none !important;
+  background: none !important;
   border: none !important;
+  box-shadow: none !important;
+  color: var(--mdtv-light-blue-800) !important;
+  font-family: var(--mdtv-font-family-poppins-normal) !important;
 
   span {
-    text-decoration: none !important;
+    font-size: 12px !important;
+  }
+
+  &:enabled:hover {
+    background: none;
+    text-decoration: underline;
   }
 }
 
-.pi-spinner {
-  animation: rotateSpinner 1000ms linear infinite;
+.mdtv-button-small {
+  font-size: 12px !important;
+  padding: 10px 16px !important;
 }
-
-@keyframes rotateSpinner {
-  to {
-    transform: rotate(360deg);
-  }
+.mdtv-button-medium {
+  font-size: 14px !important;
+  padding: 11px 20px !important;
+}
+.mdtv-button-large {
+  font-size: 16px !important;
+  padding: 12px 24px !important;
 }
 
 @media only screen and (max-width: 395px) {
-  .mdtv-button-primary-blue,
-  .mdtv-button-secondary-outline,
+  .mdtv-button-primary,
+  .mdtv-button-secondary,
   .mdtv-button-disabled,
   .mdtv-button-link {
     width: 265px;
   }
 }
+
+// .pi-spinner {
+//   animation: rotateSpinner 1000ms linear infinite;
+// }
+
+// @keyframes rotateSpinner {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

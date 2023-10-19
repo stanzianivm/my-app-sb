@@ -16,10 +16,10 @@ type Story = StoryObj<typeof MDTVButton>;
 
 export const Primary: Story = {
   args: {
-    label: "Ingresar a MIDirecTV",
+    label: "Ingresar",
     isLoading: false,
     isDisabled: false,
-    className: "primary-blue",
+    primary: "primary",
     onClick() {
       alert("Entering the system...");
     },
@@ -28,10 +28,10 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    label: "Ingresar a MIDirecTV",
+    label: "Ingresar",
     isLoading: false,
     isDisabled: false,
-    className: "secondary-outline",
+    primary: "secondary",
     onClick() {
       alert("Entering the system...");
     },
@@ -40,19 +40,19 @@ export const Secondary: Story = {
 
 export const Disabled: Story = {
   args: {
-    label: "Ingresar a MIDirecTV",
+    label: "Ingresar",
     isLoading: false,
     isDisabled: true,
-    className: "disabled",
+    primary: "disabled",
   },
 };
 
 export const Loading: Story = {
   args: {
-    // label: "",
+    // label: "pepe",
     isLoading: true,
     isDisabled: false,
-    className: "disabled",
+    primary: "disabled",
   },
 };
 
@@ -62,7 +62,7 @@ export const Link: Story = {
     isLoading: false,
     isDisabled: false,
     isLink: true,
-    className: "link",
+    primary: "link",
     onClick() {
       alert("Entering the system...");
     },

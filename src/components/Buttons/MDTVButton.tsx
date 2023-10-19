@@ -19,8 +19,10 @@ export interface MyButtonProps {
   isDisabled: boolean;
   /** Boolean property for the button to be of type link*/
   isLink?: boolean;
-  /** What class to different buttons */
-  className?: string;
+  /** What background color to use */
+  primary?: "primary" | "secondary" | "disabled" | "link";
+  /**How large should the button be? */
+  size?: "small" | "medium" | "large";
   /** The action to execute when the click is triggered. */
   onClick?: () => void;
 }
@@ -29,22 +31,36 @@ export interface MyButtonProps {
  * MIDTV Base Button
  */
 export const MDTVButton: React.FC<MyButtonProps> = ({
-  label,
-  onClick,
-  isLoading,
+  primary,
   isDisabled,
   isLink,
-  className,
+  isLoading,
+  label,
+  onClick,
+  size = "medium",
 }): JSX.Element => {
+  const mode = () => {
+    switch (primary) {
+      case "primary":
+        return "mdtv-button-primary";
+      case "secondary":
+        return "mdtv-button-secondary";
+      case "disabled":
+        return "mdtv-button-disabled";
+      case "link":
+        return "mdtv-button-link";
+    }
+  };
+
   return (
     <>
       <PrimeButton
         disabled={isDisabled}
-        loading={isLoading}
         label={label}
-        onClick={onClick}
-        className={`mdtv-button-${className}`}
         link={isLink}
+        loading={isLoading}
+        onClick={onClick}
+        className={[`mdtv-button-${size}`, mode()].join(" ")}
       />
     </>
   );

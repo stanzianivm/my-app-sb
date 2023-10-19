@@ -3,9 +3,9 @@ import { MDTVButton } from "../components/Buttons/MDTVButton";
 import "./LoginPage.scss";
 
 export const LoginPage = () => {
-  const onClick = () => {
-    console.log("pepe");
-  };
+  // const onClick = () => {
+  //   console.log("pepe");
+  // };
 
   return (
     <>
@@ -49,7 +49,7 @@ export const LoginPage = () => {
                 isLoading={false}
                 isDisabled={false}
                 className="primary-blue"
-                onClick={onClick}
+                // onClick={onClick}
               />
             </div>
           </div>

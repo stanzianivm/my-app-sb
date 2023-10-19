@@ -9,6 +9,11 @@
   border-radius: 30px !important;
   padding: 11px 10px;
 
+  &:disabled {
+    color: grey;
+    background: lightgray;
+  }
+
   &:focus {
     box-shadow: none !important;
   }
@@ -26,6 +31,9 @@
   &:enabled:hover {
     border-color: #e24c4c !important;
   }
+  // &:focus {
+  //   border-color: #e24c4c !important;
+  // }
 }
 
 .label-text {
